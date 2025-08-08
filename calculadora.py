@@ -1,27 +1,37 @@
-# Pedindo ao usuário para digitar o primeiro número
-num1 = float(input("Digite o primeiro número: "))
+def calculadora():
+    # Loop principal para que a calculadora rode continuamente
+    while True:
+        try:
+            num1 = float(input("Digite o primeiro número: "))
+            operacao = input("Digite a operação (+, -, *, /) ou 'sair' para fechar: ")
 
-# Pedindo a operação
-operacao = input("Digite a operação (+, -, *, /): ")
+            # Verificação para sair do programa
+            if operacao.lower() == 'sair':
+                print("Calculadora encerrada. Até mais!")
+                break
 
-# Pedindo ao usuário para digitar o segundo número
-num2 = float(input("Digite o segundo número: "))
+            num2 = float(input("Digite o segundo número: "))
 
-# Executando o cálculo com base na operação
-if operacao == '+':
-    resultado = num1 + num2
-    print(f"O resultado é: {resultado}")
-elif operacao == '-':
-    resultado = num1 - num2
-    print(f"O resultado é: {resultado}")
-elif operacao == '*':
-    resultado = num1 * num2
-    print(f"O resultado é: {resultado}")
-elif operacao == '/':
-    # Adicionando uma verificação para evitar divisão por zero
-    if num2 == 0:
-        print("Erro: Divisão por zero não é permitida.")
-    else:
-        resultado = num1 / num2
-        print(f"O resultado é: {resultado}")
-else:
+            if operacao == '+':
+                resultado = num1 + num2
+            elif operacao == '-':
+                resultado = num1 - num2
+            elif operacao == '*':
+                resultado = num1 * num2
+            elif operacao == '/':
+                if num2 == 0:
+                    print("Erro: Divisão por zero não é permitida.")
+                    continue  # Volta para o início do loop
+                else:
+                    resultado = num1 / num2
+            else:
+                print("Operação inválida.")
+                continue # Volta para o início do loop
+
+            print(f"O resultado é: {resultado}")
+
+        except ValueError:
+            print("Entrada inválida. Por favor, digite apenas números.")
+        
+# Chama a função para iniciar a calculadora
+calculadora()
