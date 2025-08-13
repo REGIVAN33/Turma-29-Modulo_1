@@ -10,3 +10,6 @@ elif (proximo_passo == "S"):
 else:
     print("Você não digitou nem 'E' nem 'S'.")
 
+# or | and | not
+# 
+# ou | e   | não
