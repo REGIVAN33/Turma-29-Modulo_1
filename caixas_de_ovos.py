@@ -7,4 +7,4 @@ ovos = 145
 caixas_de_ovos = 12
 caixas_cheias = ovos // caixas_de_ovos
 sobra_final = ovos % caixas_de_ovos
-print(f"145 Ovos dá para {caixas_cheias} caixas com 12, e sobra(m) {sobra_final} ovo(s).")
+print(f"145 Ovos dá para {caixas_cheias} caixas com 12, e sobra(m) {sobra_final} ovo(s)")
