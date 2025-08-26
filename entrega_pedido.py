@@ -2,6 +2,7 @@
 
 valor_total = 50.00
 area_entrega = "Centro"
+
 valor_total = float(input("Digite o valor total do pedido: "))
 area_entrega = input("Digite a área de entrega: ")
 
